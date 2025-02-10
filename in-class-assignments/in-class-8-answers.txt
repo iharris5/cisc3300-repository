@@ -1,0 +1,6 @@
+1. interpreter, interpreted
+2. Dynamic
+3. Type juggling/type coercion
+4. Non-primitive data types
+5. strict equal
+6. For the string and number addition, the number is turned into a string and combined with the other string for the output 28. For the Number function, 1 represents true and zero represents false, which is why the 1 and 0 were the outputs of the function. For the Boolean function, 1 is true and "0" is true because a string with something in it, even 0, is considered true. The 0 is false because 0itself is considered false.
