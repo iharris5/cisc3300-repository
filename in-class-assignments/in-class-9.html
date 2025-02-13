@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script>
+		const pinecones = ['I love pinecones', 'I hate pinecones', 'I am indifferent to them'];
+		
+		function hasPine(words) {
+			return words.includes("pinecone");
+		};
+		
+		const pinecones2 = pinecones.filter(function(words) {
+			return hasPine(words);
+		});
+
+		console.log(pinecones2);
+	</script>
+</html>
+	
+

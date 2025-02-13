@@ -1,0 +1,5 @@
+1. higher-order functions
+2. functional 
+3. dot notation, square bracket notation
+4. short-circuit (stop)
+5. declarative programming
