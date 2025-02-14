@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="flex-items"></div>
+			<div class="flex-items"></div>
+			<div class="flex-items"></div>
+		</div>
+	</body>
+</html>
+
+<style>
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex-items{
+		width: 100px;
+		height: 100px;
+		background-color: lightblue;
+		margin: 10px;
+	}
+
+	@media screen and (min-width: 500px) {
+		.flex-container {
+			flex-direction: row;
+		}
+	} 	
+</style>
