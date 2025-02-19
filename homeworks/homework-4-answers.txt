@@ -1,0 +1,9 @@
+1. In a compiled language, the program is expressed in the instructions of the target machine and it is unreadable by humans. In the interpreted language, a program (also called the interpreter) reads and executes the code instead of the code being directly translated by the target machine. 
+
+2. With dynamic typing, the variable can change types since type checking is performed at runtime, and the type is bound to the value. With static typing, the type is bound to the variable and the types are checked at runtime. For strongly typed, the type discipline is enforced by the compiler. For weakly typed, different data types are recognized but they are not used very strictly. It attempts to convert the data when it seems reasonable. 
+
+3. For var declaration, the variables are both global and function scoped, as well as redeclarable. For let declaration, the variables are block scoped and redeclarable. For const, the variables are block scoped and not redeclarable.
+
+4. Anonymous functions are functions without a name. Higher order functions are functions that take other functions as arguments or return a function. Callback functions are passed as an argument to another function to be called later. For first class functions, if functions in that language are treated like other variables.
+
+5. In JavaScript, an object is a data structure made up of key value pairs. JavaScript can be used in the usual ways for OOP, but for web browser it usually does not use classes to make objects. It instead is written in a more functional style.
