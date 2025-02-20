@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	</head>
+	<body>
+		<button id="ajax-get">
+			ajax get
+		</button>
+
+		<script>
+			$('#ajax-get').on('click', function () {
+				$.ajax({
+					url: 'http://localhost/',
+					type: "GET",
+					dataType: "json",
+					success: function (data) {
+						console.log(data);
+					}
+				});
+			})
+		</script>
+	</body>
+</html>
