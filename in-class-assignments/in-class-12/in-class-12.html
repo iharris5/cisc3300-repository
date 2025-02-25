@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+        </head>
+        <body>
+		<script>
+			function numDoubler() {
+				let num = 1;
+				function numDisplay() {
+					console.log(num);
+					num *= 2;
+				}
+				return numDisplay;
+			}
+
+			const number1 = numDoubler();
+			const number2 = numDoubler();
+			number1();
+			number1();
+			number2();
+		</script>
+	</body>
+</html>
+
+
