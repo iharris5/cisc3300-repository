@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	</head>
+	<body>
+		<button id="ajax-get">
+			PHP Data Button
+		</button>
+		<div id="hi-container"></div>
+		<script>
+			$('#ajax-get').on('click', function () {
+				$.ajax({
+					url: 'http://localhost/hello',
+					type: "GET",
+					dataType: "json",
+					success: function (data) {
+						console.log(data);				
+                           	$('#hi-container').append(`
+                            		<div class="user">${data['message']}</div>
+                        	`);
+				$('#hi-container').append(`
+                            		<div class="user">${data['reply']}</div>
+                        	`);
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

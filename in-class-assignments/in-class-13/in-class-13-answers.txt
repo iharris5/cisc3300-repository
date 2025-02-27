@@ -1,0 +1,5 @@
+1. $
+2. associative arrays
+3. ($type)
+4. assigned at runtime
+5. include/require
