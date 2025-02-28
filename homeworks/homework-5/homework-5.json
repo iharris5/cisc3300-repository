@@ -1,0 +1,9 @@
+{
+	"name": "Ian Harris",
+	"age": "20",
+	"greeting": "Wazaaap!",
+	"location": {
+		"planet": "Earth",
+		"state": "New York"
+	}
+}

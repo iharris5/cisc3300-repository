@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <title>Our Business Button</title>
+        <meta charset="UTF-8" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            .clicker {
+                width: 200px;
+                height: 70px;
+                background-color: brown;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 20px;
+            }
+
+	    #cookies-container {
+		    display: flex;
+		    flex-wrap: wrap;
+		    background-color: skyblue;
+	    }
+
+	    .merch-name {
+		    font-weight: bold;
+		    font-size: 20px;
+		    color: purple;
+		    margin: 10px;
+	    }
+
+	    .merch-price {
+		    font-size: 15px;
+		    color: darkgreen;
+		    padding: 15px;
+	    }
+
+        </style>
+    </head>
+    <body>
+        <button id="ajax-get" class="clicker">Business Button!</button>
+    	<div id="cookies-container"></div>
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost/cookies',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+                        $.each(data, function (key, value) {
+                            console.log(value)
+                            $('#cookies-container').append(`
+                              <div class="merch-name">${value['name']}</div>
+			      <div class="merch-price">${value['price']}</div>
+                            `)
+                        })
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>

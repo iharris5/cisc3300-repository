@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<style>
+		#success-mess {
+			font-weight: bold;
+			background-color: gold;
+			font-size: 20px;
+			text-align: center;
+		}
+		input[type="text"] {
+			width: 100%;
+			margin: 10px;
+		}
+
+		input[type="submit"] {
+			background-color: blue;
+			color: white;
+			cursor: pointer;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="form-box">
+			<h1>Tell Us About Yourself</h1>
+			<form id="info-form">
+				<input type="text" id="name" name="name" placeholder="Name?" required><br>
+				<input type="text" id="address" name="address" placeholder ="Address?" required><br>
+				<input type="submit"> 
+			</form>
+		</div>
+		<div id="success-mess"></div>
+	<script>
+		$('#info-form').on('submit', function(event) {
+			event.preventDefault();
+
+			$.ajax({
+				url: 'http://localhost/form',
+				type: "POST",
+				dataType: "json",
+				success: function(data) {
+					console.log(data);
+					$.each(data, function (key, value) {
+						console.log(value)
+						$('#success-mess').append(`
+							<div class="user">${value['message']}</div>
+							`)
+					})
+				}
+			});
+		})
+	</script>
+	</body>
+</html>
+
+

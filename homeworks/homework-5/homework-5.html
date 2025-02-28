@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<ul>
+			<li id="item-1" class="clicked" onclick="clickChange()">
+				Lions
+			</li>
+			<li id="item-2" class="clicked" onclick="clickChange()">
+				Bears
+			</li>
+			<li id="item-3" class="clicked" onclick="clickChange()">
+				Tigers
+			</li>
+		</ul>
+
+		<script>
+			function clickChange(e) {
+				if (e.target.id === "item-1") {
+					const clickClass1 = document.getElementById("item-1"); 
+					clickClass1.setAttribute('style', 'color: red');
+				}
+				else if (e.target.id === "item-2") {
+					const clickClass2 = document.getElementById("item-2");
+					clickClass2.setAttribute('style', 'color: brown');
+				}
+				else if (e.target.id === "item-3") {
+					const clickClass3 = document.getElementById("item-3");
+					clickClass3.setAttribute('style', 'color: orange');
+				}
+			}
+			document.getElementById("item-1").addEventListener('click', clickChange);
+			document.getElementById("item-2").addEventListener('click', clickChange);
+			document.getElementById("item-3").addEventListener('click', clickChange);
+		</script>
+	</body>
+</html>
