@@ -1,0 +1,5 @@
+1. arrow ->
+2. visibility
+3. inheritance
+4. Polymorphism
+5. Namespaces 
