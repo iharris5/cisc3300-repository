@@ -1,0 +1,10 @@
+1. A class is a template for creating objects, which is set up with properties each time it is created. An object is an instance of a class. OOP (Object-oriented programming) are languages that use objects in programming, and it uses concepts such as inheritance and polymorphism.
+2. A good reason to use abstract classes in OOP is when you have a class that provides some high level functionality but with certain details left out, which would be implemented by derived classes.
+3. Superglobals are several predefined variables in PHP. Some examples of data they provide are the data sent via an HTTP GET request and the data sent via an HTTP POST request. With the GET request, the data is added to a superglobal array called $_GET. With POST, the data is sent in the HTTP headers.
+4. Step 1 is to define a namespace in the class to be used. For step 2, there are two options in the place we want to use the class. We can either type the full namespace every time we want to use the class, or we can import the class into the current namespace with the use keyword. 
+5. MVC is an architectural/design pattern that separates an application into a Model, View, and Controller (the three main logical components). The Model corresponds to all the data-related logic that the user works with, and it functions to either add or retrieve data from the database. The View is used for the UI logic in the application, and it generates a user interface for the user. The Controller enables the interconnection between the views and the model, the model what to do, interacts with the View to render the final output, and is involved in routing by reacting to URLs and HTTP verbs.
+6. a. GET /users
+b. GET /users/123 (user ID)
+c. POST /users
+d. PATCH /users/123
+e. DELETE /users/123
