@@ -1,0 +1,4 @@
+1. A session is a text file that stores information about a user and their preferences on the server. A cookie is also a text file that stores data about the user and their visit. The cookie data is sent by the browser back to the server every time the browser requests another page from that domain.
+2. SQL is a structured query language that is used to interact with databases, while MySQL is a type of database that uses SQL to store and manage data.
+3. Normalization is the process by which you organize the data in a database to avoid data duplication by using relationships.
+4. Primary keys are unique identifiers within a table, while foreign keys reference primary keys in order to link rows in two different tables.
