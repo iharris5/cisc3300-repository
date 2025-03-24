@@ -1,0 +1,5 @@
+1. relationships
+2. one-to-many
+3. join
+4. left
+5. aggregate
