@@ -26,7 +26,7 @@ SELECT * FROM notes
 ORDER BY title DESC;
 
 SELECT * FROM notes
-WHERE title = 'Motto';
+LIMIT 1 OFFSET 1;
 
 SELECT * FROM notes
 WHERE description REGEXP '[aeiouAEIOU]';
