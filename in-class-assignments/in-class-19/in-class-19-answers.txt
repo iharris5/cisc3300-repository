@@ -1,0 +1,5 @@
+1. PDOs
+2. Data Source Name (DSN)
+3. your .env file or the information intended to be on it
+4. prepared statement
+5. SQL injection hack
