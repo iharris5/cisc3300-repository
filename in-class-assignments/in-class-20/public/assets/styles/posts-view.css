@@ -1,0 +1,54 @@
+.posts-form {
+    max-width: 600px;
+    background-color: lightgray;
+}
+
+.post-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post {
+    font-weight: 500;
+}
+
+.error-border {
+    border: 4px solid red;
+}
+.error-text {
+    color: red;
+    font-weight: 500;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+#delete-post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-button {
+    max-width: 200px;
+}
+
+#posts-data {
+    display: block;
+}
+
+.margin-twentyfive {
+    margin-top: 25px;
+}
+
+.margin-thirtyfive {
+    margin-top: 35px;
+}
+
+.margin-fifteen {
+    margin-top: 15px;
+}
