@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <link rel="stylesheet" href="/Assets/Styles/products-view.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Cookie Eaters Product Finder</h1>
+	</header>
+
+	<section class="search-container">
+        	<input type="text" id="search" placeholder="Type the name of a product" />
+        	<button id="searchBtn">Search</button>
+   	</section>
+
+	<section id="product-container"></section>
+	<script>
+        	$(document).ready(function () {
+            		$('#searchBtn').click(function () {
+                		const query = $('#search').val();
+                		fetchProducts(query);
+            		});
+
+			function fetchProducts(query) {
+				$.ajax({
+					url: `http://localhost/api/products/${query}`,
+					type: "GET",
+					dataType: "json",
+					success: function (data) {
+						console.log("AJAX success:", data);
+						$('#product-container').html('');
+						if (data.length > 0) {
+							$.each(data, function (key, product) {
+                                				$('#product-container').append(`
+                                    					<div class="product-item">
+                                        					<h2>${product.name}</h2>
+										<p><strong>${product.price}</strong></p>
+									</div>
+								`);
+							});
+						} else {
+							$('#product-container').append('<p>This product does not exist.</p>');
+						}
+					},
+					error: function () { 
+            					$('#product-container').html('<p>An error occurred while fetching products. Please try again later.</p>');
+					 }
+				});
+		}
+	});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
